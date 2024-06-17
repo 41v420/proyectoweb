@@ -173,42 +173,134 @@
     </section>
 
   <!-- About Us Section -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Nosotros</h2>
-      <p class="lead text-center">Somos Isilshop, empresa líder en el mercado tecnológico.
-        Tenemos más de una semana de experiencia en el rubro digital.<br>
-        Nuestra misión es brindar productos tecnológicos de alta calidad, con total garantía,
-        mediante una excelente atención personalizada.<br>
-        Nuestra visión es ser la mejor y más grande organización en el rubro tecnológico del país.
+  <section id="about" class=" conty py-5 text-white">
+    <div class="container ">
+      <h2 class="text-center mb-4">¡Celebra el Día del Padre con la Última Tecnología!</h2>
+      <p class="lead text-center me-auto">¿Buscas el regalo perfecto para el Día del Padre? Este año, sorprende 
+        a papá con la tecnología más innovadora. Desde los gadgets más modernos hasta dispositivos que facilitan 
+        la vida diaria, tenemos justo lo que necesitas para hacer de este día uno inolvidable.
       </p>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contacto</h2>
-      <form>
-        <div class="mb-3">
-          <label for="name" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" placeholder="Tu nombre aquí">
+    
+      
+</head>
+
+    <div class="container mt-5 ">
+        <div class="countdown" id="countdown">
+            <div>
+                <span class="countdown-number " id="days">0</span>
+                <span class="countdown-letter">D</span>
+            </div>
+            <div>
+                <span class="countdown-number "id="hours">0</span>
+                <span class="countdown-letter" >H</span>
+            </div>
+            <div>
+                <span class="countdown-number "id="minutes">0</span>
+                <span class="countdown-letter">M</span>
+            </div>
+            <div>
+                <span class="countdown-number "id="seconds">0</span>
+                <span class="countdown-letter">S</span>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico aquí">
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje aquí"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
+    </div>
+
+    <script>
+        
+        const countdownEndDate = new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000).getTime();
+
+        
+        const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = countdownEndDate - now;
+
+         
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+           
+            if (timeLeft < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "¡El tiempo ha terminado!";
+            }
+        }, 1000);
+    </script>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-4 bg-dark text-light">
+  <footer class="py-3 p-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5></h5>
+        <ul class="nav flex-column ">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Libro de reclamaciones</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Quienes Somos</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Mision y visión</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">valores</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5></h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Participa en pruebas de producto</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Trabaja con nosotros </a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Quieres ser socio</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Visión a futuro</a></li>
+        
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5></h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Preguntas Frecuentes</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Vende con nosotros</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Metedos de pago</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sugerencias</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Suscríbete a nuestro boletín</h5>
+          <p>Resumen mensual de nuestros mejores productos y ofertas.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">ingresa tu correo</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="tu correo electronico">
+            <button class="btn btn-primary" type="button">Subscribete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <link rel="stylesheet" href="">
+
+    <div class="d-flex justify-content-end">
+      <a href="https://www.instagram.com/" target="_blank">
+        <img class="img-fluid me-3" src="img/1.png" " alt="" style="width: 80px;">
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img class="img-fluid me-3" src="img/facebook.png" alt="" style="width: 70px;">
+      </a>
+      <a href="https://x.com/?lang=es"target=_blank>
+        <img class="img-fluid me-3" src="img/twitter.png" alt="" style="width: 70px;">
+      </a>
+  </div>
+  </footer>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-light width-100%">
     <p>© 2024 Isilshop. Todos los derechos reservados.</p>
   </footer>
 
