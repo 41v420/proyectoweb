@@ -28,3 +28,29 @@
   text-align: center;
   margin-right: 30px;
   }
+.conty{
+  background: linear-gradient(to right, #18161a, #162133dc);
+}
+  
+  .countdown {
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
+  .countdown div {
+      display: flex;
+      align-items: center;
+  }
+
+  .countdown-number{
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-right: 0.25rem;
+    padding: 10px;
+    color: #6edd14da;
+  }
+.countdown-letter{
+  opacity: .5;
+}
+  
